@@ -4,7 +4,7 @@ require_once 'player.php';
 
 class Game {
     private $cards;
-    private $players;
+    public $players;
     private $currentPlayer;
     private $pairsFound;
 
