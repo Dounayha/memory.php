@@ -1,6 +1,6 @@
 <?php
-require_once 'Card.php';
-require_once 'Player.php';
+require_once 'card.php';
+require_once 'player.php';
 
 class Game {
     private $cards;
