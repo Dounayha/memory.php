@@ -16,10 +16,19 @@ class Game {
         $this->players = [];
         $this->pairsFound = 0;
 
-        // Crée les cartes
+        // Chemins d'images pour chaque paire
+        $imagePaths = [
+            './assets/images/aurore.png',
+            './assets/images/blancheneige.png',
+            './assets/images/raiponce.png',
+            // Ajoutez plus de chemins d'images si nécessaire
+        ];
+
+        // Crée les cartes avec des images
         for ($i = 1; $i <= $numberOfPairs; $i++) {
-            $this->cards[] = new Card($i);
-            $this->cards[] = new Card($i);
+            $imagePath = $imagePaths[($i - 1) % count($imagePaths)]; // Choisir une image aléatoire pour chaque paire
+            $this->cards[] = new Card($i, chr(64 + $i), $imagePath); // Crée une carte avec un caractère unique (A, B, C, etc.)
+            $this->cards[] = new Card($i, chr(64 + $i), $imagePath); // Deuxième carte de la paire
         }
 
         shuffle($this->cards); // Mélange les cartes
@@ -58,4 +67,5 @@ class Game {
         return $this->pairsFound >= count($this->cards) / 2;
     }
 }
+
 ?>
