@@ -1,23 +1,25 @@
 <?php
 class Card {
     private $id;
-    private $isVisible;
+    private $value;
+    private $imagePath; // Nouvelle propriété pour stocker le chemin de l'image
 
-    public function __construct($id) {
+    public function __construct($id, $value, $imagePath) {
         $this->id = $id;
-        $this->isVisible = false;  // Par défaut, les cartes sont cachées
+        $this->value = $value;
+        $this->imagePath = $imagePath; // Initialiser l'image
     }
 
     public function getId() {
         return $this->id;
     }
 
-    public function flip() {
-        $this->isVisible = !$this->isVisible;  // Inverse le statut de visibilité
+    public function getValue() {
+        return $this->value;
     }
 
-    public function isVisible() {
-        return $this->isVisible;
+    public function getImagePath() {
+        return $this->imagePath;
     }
 }
 ?>
