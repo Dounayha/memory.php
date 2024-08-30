@@ -21,7 +21,7 @@ class Game {
             './assets/images/aurore.png',
             './assets/images/blancheneige.png',
             './assets/images/raiponce.png',
-            // Ajoutez plus de chemins d'images si nécessaire
+            
         ];
 
         // Crée les cartes avec des images

@@ -4,7 +4,7 @@ class Card {
     private $value;
     private $imagePath; // Nouvelle propriété pour stocker le chemin de l'image
 
-    public function __construct($id, $value, $imagePath) {
+    public function __constvruct($id, $value, $imagePath) {
         $this->id = $id;
         $this->value = $value;
         $this->imagePath = $imagePath; // Initialiser l'image

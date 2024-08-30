@@ -11,11 +11,14 @@
 <h2>Jeu de Memory</h2>
 <div class="card-container">
     <?php
-    // Images des cartes (utilisez le même chemin pour chaque paire)
+    
     $images = [
         './assets/images/aurore.png',
         './assets/images/blancheneige.png',
-        './assets/images/raiponce.png'
+        './assets/images/raiponce.png',
+        './assets/images/jasmine.png',
+        './assets/images/reinedesneiges.png',
+       './assets/images/sofia.png',
     ];
 
     // Double les images pour créer des paires
